@@ -3,12 +3,8 @@ Compile and Run
 Compile:
 
 
-		g++ -o kmerEst kmerCountEstimate.cpp -std=c++11 -O3 -march=native
+		g++ -o pkmerEst parallelKmerCountEstimate.cpp -std=c++11 -O3 -march=native
 
 Run:
 
-		./KmerEst -f <seq.fa> -k  <kmerLen> -s <minHeap_Size> -c <coverage> -o <out.txt>
-  
-  
-  
-  
+		./pkmerEst -f <seq.fa> -k  <kmerLen> -s <minHeap_Size> -c <coverage> -t <thread_count> -q <queue_size> -o <out.txt>
